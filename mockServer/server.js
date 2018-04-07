@@ -6,6 +6,16 @@ app.use(function (req, res, next) {
     next();
 });
 
+function setupProxy(useEndpoint, target) {
+    var pathRewrite = {};
+    var pathRewriteValue = `^${useEndpoint}`;
+    pathRewrite[pathRewriteValue] = '';
+    app.use(useEndpoint, proxy({
+        target,
+        changeOrgin: true,
+        pathRewrite
+    }));
+}
 
 app.use('/couchdb', proxy({
     target: 'http://127.0.0.1:5984',
@@ -14,12 +24,8 @@ app.use('/couchdb', proxy({
         '^/couchdb': ''
     }
 }));
-app.use('/new', proxy({
-    target: 'http://127.0.0.1:3000',
-    changeOrgin: true,
-    pathRewrite: {
-        '^/new': ''
-    }
-}));
+setupProxy('/couchdb', 'http://127.0.0.1:5984');
+setupProxy('/lambdas', 'http://127.0.0.1:3000');
+
 
 app.listen(8000, () => console.log('Example app listening on port 3000!'));
