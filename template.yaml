@@ -7,7 +7,7 @@
       Type: "AWS::Serverless::Function"
       Properties: 
         Runtime: "nodejs6.10"
-        Handler: "index.handler"
+        Handler: "/dist/getTickets/index.handler"
         Events: 
           RootDeveloperHub: 
             Type: "Api"

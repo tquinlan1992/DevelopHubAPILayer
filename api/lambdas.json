@@ -1,0 +1,7 @@
+[
+    {
+        "function": "ExampleFunction",
+        "handler": "lambda.handler",
+        "path": "/new"
+    }
+]

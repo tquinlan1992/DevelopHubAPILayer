@@ -1,0 +1,10 @@
+[
+    {
+        "path": "/couchdb",
+        "target": "https://a5fa6971-069a-422b-84cf-4ed5346e9ecb-bluemix:b4263270b80cd1640292a64ba8bfbd41f83bbf542c48f2acc4c4b4ff5f65303d@a5fa6971-069a-422b-84cf-4ed5346e9ecb-bluemix.cloudant.com"
+    },
+    {
+        "path": "/lambdas",
+        "target": "http: //127.0.0.1:3000"
+    }
+]

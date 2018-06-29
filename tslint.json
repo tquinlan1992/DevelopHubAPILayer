@@ -1,0 +1,37 @@
+{
+    "rules": {
+        "curly": true,
+        "no-eval": true,
+        "no-invalid-template-strings": true,
+        "no-string-literal": true,
+        "prefer-object-spread": true,
+        "triple-equals": [
+            true,
+            "allow-null-check"
+        ],
+        "use-isnan": true,
+        "eofline": true,
+        "indent": [
+            true,
+            "spaces",
+            4
+        ],
+        "linebreak-style": [
+            true,
+            "LF"
+        ],
+        "no-duplicate-imports": true,
+        "prefer-const": true,
+        "arrow-return-shorthand": true,
+        "new-parens": true,
+        "no-consecutive-blank-lines": true,
+        "semicolon": [
+            true,
+            "always"
+        ],
+        "no-var-keyword": true
+    },
+    "tslint": {
+        "ignoreDefinitionFiles": false
+    }
+}

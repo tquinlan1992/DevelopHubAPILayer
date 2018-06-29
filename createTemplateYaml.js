@@ -1,6 +1,6 @@
 var resources = require('./api.json');
 resources = resources.filter(resource => {
-    resource.type = "lambda";
+    return resource.type === "lambda";
 });
 var YAML = require('json2yaml')
 
